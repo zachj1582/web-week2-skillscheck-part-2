@@ -3,7 +3,8 @@
 
 //Create a prototype for a String called reverse that returns the string but, like, reversed.
 
-//Code here
+function 
+
 
 
 //////////////////PROBLEM 2////////////////////
