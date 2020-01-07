@@ -9,44 +9,52 @@
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
   
-  //Code here
+ function dragonMapper(arr){
+   return arr.map(v => v + '...here be dragons')
+  
+ }
 
 
 
 //////////////////PROBLEM 2////////////////////
 
-//Write a function called cookieLoversOnly that takes 
-//in an array and filters out every object that
-//does NOT have the key favoriteCookie.
-//cookieLoversOnly should return the filtered array.
+// Write a function called cookieLoversOnly that takes 
+// in an array and filters out every object that
+// does NOT have the key favoriteCookie.
+// cookieLoversOnly should return the filtered array.
   
-  //Code here
+function cookieLoversOnly(array){
+  return array.filter(val => val.favorites !== val.favoriteCookie
+  )
+}
 
 
 //////////////////PROBLEM 3////////////////////
 
-//Write a function called changeValue that takes 
-//in an array, and a callback function.
-//changeValue should invoke the callback function 
-//for every element in the array. 
-//changeValue should pass the current element into 
-//the callback function as an argument every time it is invoked.
-//Hint: there is an array method for this.
+// Write a function called changeValue that takes 
+// in an array, and a callback function.
+// changeValue should invoke the callback function 
+// for every element in the array. 
+// changeValue should pass the current element into 
+// the callback function as an argument every time it is invoked.
+// Hint: there is an array method for this.
 
 
-  //Code here
-
-
+ function changeValue(arr, cb){
+  const changedValue = arr.forEach(element => cb(element))
+ }
 
 //////////////////PROBLEM 4////////////////////
 
-//Write a function called findProduct that takes in 
-//an array, and uses .reduce to find the product of 
-//the elements (here the word product means the result 
-//of multiplying all the elements together)
-//Return the product.
+// Write a function called findProduct that takes in 
+// an array, and uses .reduce to find the product of 
+// the elements (here the word product means the result 
+// of multiplying all the elements together)
+// Return the product.
   
-  //Code here
+ function findProduct(arr){
+   return arr.reduce((acc,curr) => acc * curr);
+ }
 
 
 //////////////////PROBLEM 5////////////////////
@@ -63,7 +71,10 @@
 // character at index 2 of "wide": "d"
 // cipherize will return: "d"
 
-  //Code here
+  function cipherize(arr,str){
+    const index = arr.indexOf(str);
+    return arr[index].charAt(index)
+  }
 
 
 
@@ -74,4 +85,6 @@
 //string. Use built-in methods for taking the string 
 //apart, reversing it, and putting it back together again.
 
-  //Code here
+function reverseMe(str){
+  return str.split('').reverse().join('');
+}
